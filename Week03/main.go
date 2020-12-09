@@ -1,8 +1,3 @@
-# 学习笔记
-
-## `errgroup` 实现 `http server` 并优雅退出
-
-```go
 package main
 
 import (
@@ -100,4 +95,3 @@ func main() {
 	}
 	log.Println("😂 Bye")
 }
-```
