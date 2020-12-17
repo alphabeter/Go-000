@@ -10,7 +10,7 @@ type UserService struct {
 	UserRepository repository.UserRepository
 }
 
-// ProvideUserService func.
+// ProvideUserService returns a UserService.
 func ProvideUserService(u repository.UserRepository) UserService {
 	return UserService{UserRepository: u}
 }

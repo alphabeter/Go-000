@@ -13,6 +13,9 @@ func initDatabase() *gorm.DB {
 		panic(err)
 	}
 	db.AutoMigrate(&model.User{})
+	db.Create(&model.User{Name: "A1001", Age: 43})
+	db.Create(&model.User{Name: "B1001", Age: 33})
+	db.Create(&model.User{Name: "C1001", Age: 32})
 	return db
 }
 

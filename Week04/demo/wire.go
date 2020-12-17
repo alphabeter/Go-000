@@ -1,3 +1,5 @@
+//+build wireinject
+
 package main
 
 import (
@@ -8,7 +10,7 @@ import (
 	"gorm.io/gorm"
 )
 
-// InitUserAPI func.
+// InitUserAPI returns a UserAPI.
 func InitUserAPI(db *gorm.DB) api.UserAPI {
 	wire.Build(repository.ProvideUserRepository, service.ProvideUserService, api.ProvideUserAPI)
 	return api.UserAPI{}

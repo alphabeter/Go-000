@@ -10,7 +10,7 @@ type UserRepository struct {
 	DB *gorm.DB
 }
 
-// ProvideUserRepository func.
+// ProvideUserRepository returns a UserRepository.
 func ProvideUserRepository(DB *gorm.DB) UserRepository {
 	return UserRepository{DB: DB}
 }
